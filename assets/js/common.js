@@ -1,15 +1,16 @@
 (() => {
+  const script = document.currentScript;
+
   if (document.body.classList.contains('inner')) {
-    const script = document.currentScript;
     const themeHref = script
-      ? new URL('../css/inner-win95-clear.css?v=20260713-5', script.src).href
-      : 'assets/css/inner-win95-clear.css?v=20260713-5';
+      ? new URL('../css/inner-win95-clear.css?v=20260713-6', script.src).href
+      : 'assets/css/inner-win95-clear.css?v=20260713-6';
     const contrastHref = script
-      ? new URL('../css/inner-text-contrast.css?v=20260713-5', script.src).href
-      : 'assets/css/inner-text-contrast.css?v=20260713-5';
+      ? new URL('../css/inner-text-contrast.css?v=20260713-6', script.src).href
+      : 'assets/css/inner-text-contrast.css?v=20260713-6';
     const chicagoHref = script
-      ? new URL('../css/inner-chicago-subtext.css?v=20260713-5', script.src).href
-      : 'assets/css/inner-chicago-subtext.css?v=20260713-5';
+      ? new URL('../css/inner-chicago-subtext.css?v=20260713-6', script.src).href
+      : 'assets/css/inner-chicago-subtext.css?v=20260713-6';
 
     if (!document.querySelector('link[data-inner-theme="win95-clear"]')) {
       const theme = document.createElement('link');
@@ -33,6 +34,67 @@
       chicago.href = chicagoHref;
       chicago.dataset.innerSubtext = 'chicago';
       document.head.appendChild(chicago);
+    }
+  }
+
+  /* Every individual song page contains .song-shell. */
+  if (document.querySelector('.song-shell')) {
+    document.body.classList.add('page-song');
+
+    const songStyleHref = script
+      ? new URL('../css/song-film-background.css?v=20260713-6', script.src).href
+      : '../assets/css/song-film-background.css?v=20260713-6';
+
+    if (!document.querySelector('link[data-song-film-style]')) {
+      const songStyle = document.createElement('link');
+      songStyle.rel = 'stylesheet';
+      songStyle.href = songStyleHref;
+      songStyle.dataset.songFilmStyle = 'deep-end-of-time';
+      document.head.appendChild(songStyle);
+    }
+
+    if (!document.querySelector('.song-film-wrap')) {
+      const wrap = document.createElement('div');
+      wrap.className = 'song-film-wrap';
+      wrap.setAttribute('aria-hidden', 'true');
+
+      const video = document.createElement('video');
+      video.className = 'song-film';
+      video.autoplay = true;
+      video.muted = true;
+      video.defaultMuted = true;
+      video.loop = true;
+      video.playsInline = true;
+      video.preload = 'auto';
+      video.tabIndex = -1;
+      video.disablePictureInPicture = true;
+      video.setAttribute('muted', '');
+      video.setAttribute('playsinline', '');
+
+      if (script) {
+        video.poster = new URL('../images/home/deep-end-poster.jpg', script.src).href;
+
+        const mobileSource = document.createElement('source');
+        mobileSource.src = new URL('../video/home-deep-end-background-mobile.mp4', script.src).href;
+        mobileSource.type = 'video/mp4';
+        mobileSource.media = '(max-width: 650px)';
+        video.appendChild(mobileSource);
+
+        const desktopSource = document.createElement('source');
+        desktopSource.src = new URL('../video/home-deep-end-background.mp4', script.src).href;
+        desktopSource.type = 'video/mp4';
+        video.appendChild(desktopSource);
+      } else {
+        video.poster = '../assets/images/home/deep-end-poster.jpg';
+        video.src = '../assets/video/home-deep-end-background.mp4';
+      }
+
+      const overlay = document.createElement('div');
+      overlay.className = 'song-film-overlay';
+
+      wrap.append(video, overlay);
+      document.body.prepend(wrap);
+      video.play().catch(() => {});
     }
   }
 
