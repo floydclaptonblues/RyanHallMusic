@@ -1,0 +1,15 @@
+/* Chicago Classic for all secondary copy on inner pages. */
+body.inner p,
+body.inner li,
+body.inner small,
+body.inner figcaption,
+body.inner .subtitle,
+body.inner .meta,
+body.inner .kicker,
+body.inner .section-kicker,
+body.inner .placeholder-note,
+body.inner .audio-info,
+body.inner .genre-titlebar span,
+body.inner .preview-flag {
+  font-family: var(--chicago), "Chicago Classic", Chicago, Charcoal, Geneva, Tahoma, sans-serif !important;
+}
