@@ -21,8 +21,12 @@
   };
 
   const trackCard = (track, index) => {
-    const usesWhyArtwork = track.genre === 'Avant-Garde' || track.genre === 'Ambient';
-    const artClass = usesWhyArtwork ? 'track-art track-art--why-are-we-here' : 'track-art';
+    let artClass = 'track-art';
+    if (track.genre === 'Rock') {
+      artClass += ' track-art--on-the-rays';
+    } else if (track.genre === 'Avant-Garde' || track.genre === 'Ambient') {
+      artClass += ' track-art--why-are-we-here';
+    }
 
     return `
     <article class="track-card glass-panel">
