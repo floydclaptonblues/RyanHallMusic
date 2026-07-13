@@ -2,12 +2,13 @@
   if (document.body.classList.contains('inner')) {
     const script = document.currentScript;
     const href = script
-      ? new URL('../css/inner-editorial.css', script.src).href
-      : 'assets/css/inner-editorial.css';
-    if (!document.querySelector(`link[href="${href}"]`)) {
+      ? new URL('../css/inner-win95-clear.css?v=20260713-2', script.src).href
+      : 'assets/css/inner-win95-clear.css?v=20260713-2';
+    if (!document.querySelector('link[data-inner-theme="win95-clear"]')) {
       const theme = document.createElement('link');
       theme.rel = 'stylesheet';
       theme.href = href;
+      theme.dataset.innerTheme = 'win95-clear';
       document.head.appendChild(theme);
     }
   }
