@@ -69,8 +69,17 @@ body.inner.page-song .song-shell .song-art-large.album-art--why-are-we-here {
   background-size: cover !important;
 }
 
+body.inner.page-song .song-shell .song-art-large.album-art--big-easy-homeboy {
+  background-color: #000 !important;
+  background-image: url("../images/art/Big%20Easy%20Homeboy%20cover%20small.jpg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
 body.inner.page-song .song-shell .song-art-large.album-art--on-the-rays::after,
-body.inner.page-song .song-shell .song-art-large.album-art--why-are-we-here::after {
+body.inner.page-song .song-shell .song-art-large.album-art--why-are-we-here::after,
+body.inner.page-song .song-shell .song-art-large.album-art--big-easy-homeboy::after {
   content: none !important;
   display: none !important;
 }
