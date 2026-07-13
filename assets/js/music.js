@@ -20,9 +20,13 @@
     return `${minutes}:${String(Math.floor(seconds % 60)).padStart(2,'0')}`;
   };
 
-  const trackCard = (track, index) => `
+  const trackCard = (track, index) => {
+    const usesWhyArtwork = track.genre === 'Avant-Garde' || track.genre === 'Ambient';
+    const artClass = usesWhyArtwork ? 'track-art track-art--why-are-we-here' : 'track-art';
+
+    return `
     <article class="track-card glass-panel">
-      <div class="track-art" aria-hidden="true"></div>
+      <div class="${artClass}" aria-hidden="true"></div>
       <div class="track-copy">
         <p class="meta">${track.duration}</p>
         <h2>${track.title}</h2>
@@ -33,6 +37,7 @@
         </div>
       </div>
     </article>`;
+  };
 
   grid.innerHTML = genreOrder.map((genre) => {
     const tracks = catalog
