@@ -1,4 +1,12 @@
-/* Chicago Classic for all secondary copy on inner pages. */
+/* Real Chicago Classic web font for all inner-page secondary copy. */
+@font-face {
+  font-family: "Chicago Classic";
+  src: url("https://cdn.jsdelivr.net/gh/cuneytozseker/TinyProgrammer@ab1d47bdfbd6001132faa4bdb3224d3959fd04e9/display/assets/ChicagoFLF.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 body.inner p,
 body.inner li,
 body.inner small,
@@ -8,8 +16,16 @@ body.inner .meta,
 body.inner .kicker,
 body.inner .section-kicker,
 body.inner .placeholder-note,
+body.inner .song-subtitle,
 body.inner .audio-info,
 body.inner .genre-titlebar span,
-body.inner .preview-flag {
-  font-family: var(--chicago), "Chicago Classic", Chicago, Charcoal, Geneva, Tahoma, sans-serif !important;
+body.inner .preview-flag,
+body.inner .page-heading p,
+body.inner .contact-grid p,
+body.inner .contact-list li,
+body.inner .notes-grid p,
+body.inner .video-copy p,
+body.inner .track-copy p {
+  font-family: "Chicago Classic", Chicago, Charcoal, Geneva, Tahoma, sans-serif !important;
+  font-style: normal;
 }
