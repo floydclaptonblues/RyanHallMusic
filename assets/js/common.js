@@ -9,8 +9,8 @@
       ? new URL('../css/inner-text-contrast.css?v=20260713-6', script.src).href
       : 'assets/css/inner-text-contrast.css?v=20260713-6';
     const chicagoHref = script
-      ? new URL('../css/inner-chicago-subtext.css?v=20260713-6', script.src).href
-      : 'assets/css/inner-chicago-subtext.css?v=20260713-6';
+      ? new URL('../css/inner-chicago-subtext.css?v=20260713-7', script.src).href
+      : 'assets/css/inner-chicago-subtext.css?v=20260713-7';
 
     if (!document.querySelector('link[data-inner-theme="win95-clear"]')) {
       const theme = document.createElement('link');
