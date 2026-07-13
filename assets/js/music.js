@@ -10,7 +10,7 @@
   const duration = document.getElementById('dock-duration');
   const canvas = document.getElementById('visualizer');
   const ctx = canvas.getContext('2d');
-  const genreOrder = ['Rock', 'Blues', 'Avant-Garde', 'Ambient'];
+  const genreOrder = ['Rock', 'Blues', 'Ambient', 'Avant-Garde'];
   let activeIndex = -1;
   let audioContext, analyser, source, data;
 
