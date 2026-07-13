@@ -51,6 +51,30 @@ body.inner.page-song .site-header {
   z-index: 200;
 }
 
+/* Assigned album art on individual song pages. Higher specificity keeps the
+   artwork visible over the later clear-window background overrides. */
+body.inner.page-song .song-shell .song-art-large.album-art--on-the-rays {
+  background-color: #000 !important;
+  background-image: url("../images/art/On%20The%20Rays%20Of%20The%20Sun.jpg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+body.inner.page-song .song-shell .song-art-large.album-art--why-are-we-here {
+  background-color: #000 !important;
+  background-image: url("../images/art/why-are-we-here.webp") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+body.inner.page-song .song-shell .song-art-large.album-art--on-the-rays::after,
+body.inner.page-song .song-shell .song-art-large.album-art--why-are-we-here::after {
+  content: none !important;
+  display: none !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   body.inner.page-song .song-film {
     display: none;
