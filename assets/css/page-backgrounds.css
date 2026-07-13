@@ -1,4 +1,6 @@
-/* Page-specific visual environments. Loaded after site.css. */
+@import url("./inner-win95-clear.css?v=20260713-2");
+
+/* Page-specific visual environments. */
 body.inner.page-music,
 body.inner.page-videos,
 body.inner.page-pictures,
@@ -14,30 +16,30 @@ body.inner.page-contact::before {
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
-  filter: saturate(.94) contrast(1.04);
+  filter: saturate(1) contrast(1.02);
 }
 
 body.inner.page-music::before {
   background-image:
-    linear-gradient(180deg, rgba(4, 7, 13, .16), rgba(3, 6, 13, .28)),
+    linear-gradient(180deg, rgba(4,7,13,.03), rgba(3,6,13,.10)),
     url("https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDFzdHl3ZGZud3piZGJmaTA1YjcyaDdlNTAxeXZkemwxM2RoNTZscCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/81si2Epp3qFmIrz9mP/giphy.gif");
 }
 
 body.inner.page-videos::before {
   background-image:
-    linear-gradient(180deg, rgba(3, 5, 12, .14), rgba(2, 4, 10, .30)),
+    linear-gradient(180deg, rgba(3,5,12,.03), rgba(2,4,10,.10)),
     url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzZkcHoxMTV4aGw3cXFmcDhla3YyYW16eHZjYmdpNjVsOW91MmN3MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LDoYWD9UbrHdisiffx/giphy.gif");
 }
 
 body.inner.page-pictures::before {
   background-image:
-    linear-gradient(180deg, rgba(4, 5, 12, .10), rgba(3, 5, 12, .24)),
+    linear-gradient(180deg, rgba(4,5,12,.02), rgba(3,5,12,.08)),
     url("https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnk1cjN1ZWF2NGJqM2x4cmRpMTRmY2FubTZ0eDc4YmtqdG13MzI5dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/saEyTLwwrQwNsRaBel/giphy.gif");
 }
 
 body.inner.page-contact::before {
   background-image:
-    linear-gradient(180deg, rgba(3, 6, 10, .22), rgba(2, 5, 9, .48)),
+    linear-gradient(180deg, rgba(3,6,10,.03), rgba(2,5,9,.12)),
     url("../images/photos/two-payphones.webp");
   background-position: center 46%;
 }
@@ -51,17 +53,8 @@ body.inner.page-contact::after {
   clip-path: none;
   opacity: 1;
   background:
-    linear-gradient(90deg, rgba(1, 4, 9, .18), transparent 28%, transparent 72%, rgba(1, 4, 9, .18)),
-    linear-gradient(180deg, rgba(1, 4, 9, .16) 0%, transparent 32%, rgba(1, 4, 9, .30) 100%);
-}
-
-body.inner.page-music .page-heading,
-body.inner.page-videos .page-heading,
-body.inner.page-pictures .page-heading,
-body.inner.page-contact .page-heading,
-body.inner.page-contact .glass-panel {
-  background: linear-gradient(145deg, rgba(255,255,255,.91), rgba(220,245,251,.78));
-  backdrop-filter: blur(18px) saturate(1.08);
+    linear-gradient(90deg, rgba(1,4,9,.05), transparent 22%, transparent 78%, rgba(1,4,9,.05)),
+    linear-gradient(180deg, rgba(1,4,9,.04) 0%, transparent 42%, rgba(1,4,9,.08) 100%);
 }
 
 @media (max-width: 800px) {
