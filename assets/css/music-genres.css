@@ -56,6 +56,20 @@ body.page-music .genre-grid .track-card {
   margin: 0;
 }
 
+/* Shared cover for every Avant-Garde and Ambient recording. */
+body.page-music .track-art.track-art--why-are-we-here {
+  background-color: #000 !important;
+  background-image: url("../images/art/why-are-we-here.webp") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+body.page-music .track-art.track-art--why-are-we-here::after {
+  content: none !important;
+  display: none !important;
+}
+
 @media (max-width: 850px) {
   body.page-music .genre-grid {
     grid-template-columns: 1fr;
