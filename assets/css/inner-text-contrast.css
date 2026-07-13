@@ -1,0 +1,65 @@
+/* Readability layer for translucent Windows 95 windows. */
+body.inner .glass-panel,
+body.inner .track-card,
+body.inner .video-card,
+body.inner .song-copy,
+body.inner .notes-grid article,
+body.inner.page-contact .glass-panel {
+  color: #fffdf5 !important;
+  background: rgba(18, 20, 24, .42) !important;
+  text-shadow: 1px 1px 2px rgba(0,0,0,.96);
+  backdrop-filter: blur(1.5px) saturate(.94);
+}
+
+body.inner .track-copy h2,
+body.inner .video-copy h2,
+body.inner .song-copy h1,
+body.inner .notes-grid h2,
+body.inner .glass-panel p,
+body.inner .glass-panel li,
+body.inner .contact-grid p,
+body.inner .contact-list li {
+  color: #fffdf5 !important;
+  text-shadow: 1px 1px 2px #000, 0 0 5px rgba(0,0,0,.72) !important;
+}
+
+body.inner .track-copy .subtitle,
+body.inner .video-card .subtitle,
+body.inner .song-copy .song-subtitle,
+body.inner .placeholder-note,
+body.inner .section-kicker,
+body.inner .meta {
+  color: #f1eee4 !important;
+  text-shadow: 1px 1px 2px #000 !important;
+}
+
+body.inner .contact-list li {
+  border-bottom-color: rgba(255,255,255,.56) !important;
+}
+
+body.inner .photo-card figcaption {
+  color: #fffdf5 !important;
+  background: rgba(18,20,24,.58) !important;
+  text-shadow: 1px 1px 2px #000 !important;
+}
+
+body.inner .video-copy {
+  background: rgba(18,20,24,.34) !important;
+}
+
+body.inner .preview-flag {
+  color: #161200 !important;
+  background: rgba(255,255,192,.82) !important;
+  text-shadow: none !important;
+}
+
+/* Preserve authentic black-on-gray controls. */
+body.inner .chrome-button,
+body.inner .text-button,
+body.inner .play-button,
+body.inner .audio-dock,
+body.inner .main-nav a,
+body.inner .brand,
+body.inner .brand span {
+  text-shadow: 1px 1px 0 rgba(255,255,255,.78);
+}
