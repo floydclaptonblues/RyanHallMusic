@@ -26,12 +26,96 @@ body.inner.page-404-ever::after {
     repeating-linear-gradient(90deg, rgba(70,90,130,.025) 0 1px, transparent 1px 7px);
 }
 
+@keyframes foreverNeonHue {
+  0%, 100% {
+    color: #69f7ff;
+    text-shadow:
+      0 0 2px #fff,
+      0 0 7px #53f5ff,
+      0 0 16px #00dbea,
+      0 0 28px rgba(0, 219, 234, .78);
+  }
+  25% {
+    color: #ffd76b;
+    text-shadow:
+      0 0 2px #fff8d4,
+      0 0 7px #ffd45d,
+      0 0 17px #e7a900,
+      0 0 30px rgba(231, 169, 0, .76);
+  }
+  50% {
+    color: #fff;
+    text-shadow:
+      0 0 2px #fff,
+      0 0 8px #fff,
+      0 0 18px rgba(255, 255, 255, .90),
+      0 0 32px rgba(216, 246, 255, .70);
+  }
+  75% {
+    color: #070707;
+    text-shadow:
+      0 0 1px rgba(255, 255, 255, .58),
+      0 0 8px rgba(0, 0, 0, .95),
+      0 0 18px rgba(0, 0, 0, .92);
+  }
+}
+
+@keyframes foreverBrokenNeon {
+  0%, 7%, 9%, 18%, 22%, 44%, 47%, 63%, 66%, 82%, 86%, 100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  8%, 20%, 45%, 64%, 84% {
+    opacity: .10;
+    filter: brightness(.25);
+  }
+  8.5%, 21%, 46%, 65%, 85% {
+    opacity: .92;
+    filter: brightness(1.35);
+  }
+  31%, 31.8%, 73%, 74.3% {
+    opacity: 0;
+    filter: brightness(0);
+  }
+  32.4%, 75% {
+    opacity: .55;
+    filter: brightness(.65);
+  }
+}
+
 body.page-404-ever .page-heading--forever {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(18px, 4vw, 54px);
   padding-bottom: clamp(25px, 5vw, 60px);
 }
 
 body.page-404-ever .page-heading--forever h1 {
   margin: 0;
+}
+
+body.page-404-ever .neon-warning {
+  justify-self: end;
+  max-width: 390px;
+  margin: 0 !important;
+  padding: 8px 12px !important;
+  border: 0 !important;
+  color: #69f7ff;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-family: "MS DOT Gothic 16", "DotGothic16", "MS Gothic", monospace !important;
+  font-size: clamp(18px, 2.5vw, 34px) !important;
+  font-style: normal !important;
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: .075em;
+  text-align: center;
+  text-transform: uppercase;
+  transform: rotate(-1deg);
+  animation:
+    foreverNeonHue 12s linear infinite,
+    foreverBrokenNeon 5.3s steps(1, end) infinite;
 }
 
 body.page-404-ever .forever-section {
@@ -112,11 +196,34 @@ body.page-404-ever .forever-card--wide {
 }
 
 @media (max-width: 760px) {
+  body.page-404-ever .page-heading--forever {
+    grid-template-columns: 1fr;
+  }
+
+  body.page-404-ever .neon-warning {
+    justify-self: start;
+    max-width: 100%;
+    text-align: left;
+  }
+
   body.page-404-ever .forever-grid {
     grid-template-columns: 1fr;
   }
 
   body.page-404-ever .forever-card--wide {
     grid-column: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.page-404-ever .neon-warning {
+    color: #69f7ff;
+    opacity: 1;
+    filter: none;
+    animation: none;
+    text-shadow:
+      0 0 2px #fff,
+      0 0 7px #53f5ff,
+      0 0 16px #00dbea;
   }
 }
