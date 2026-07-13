@@ -120,8 +120,46 @@
     }
   }
 
-  const toggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.main-nav');
+  if (nav) {
+    const links = Array.from(nav.querySelectorAll('a'));
+    const showsLink = links.find((link) => {
+      try {
+        return new URL(link.href, window.location.href).pathname.endsWith('/pictures.html');
+      } catch {
+        return false;
+      }
+    });
+
+    if (showsLink) showsLink.textContent = 'Shows';
+
+    const hasForever = links.some((link) => {
+      try {
+        return new URL(link.href, window.location.href).pathname.endsWith('/404-ever.html');
+      } catch {
+        return false;
+      }
+    });
+
+    if (!hasForever) {
+      const forever = document.createElement('a');
+      const siteRoot = script ? new URL('../../', script.src) : new URL('.', window.location.href);
+      forever.href = new URL('404-ever.html', siteRoot).href;
+      forever.textContent = '404-EVER';
+      if (window.location.pathname.endsWith('/404-ever.html')) forever.setAttribute('aria-current', 'page');
+
+      const contactLink = links.find((link) => {
+        try {
+          return new URL(link.href, window.location.href).pathname.endsWith('/contact.html');
+        } catch {
+          return false;
+        }
+      });
+      nav.insertBefore(forever, contactLink || null);
+    }
+  }
+
+  const toggle = document.querySelector('.nav-toggle');
   if (toggle && nav) {
     toggle.addEventListener('click', () => {
       const open = nav.classList.toggle('open');
