@@ -74,8 +74,18 @@ body.page-music .track-art.track-art--on-the-rays {
   background-size: cover !important;
 }
 
+/* Shared cover for every Blues recording. */
+body.page-music .track-art.track-art--big-easy-homeboy {
+  background-color: #000 !important;
+  background-image: url("../images/art/Big%20Easy%20Homeboy%20cover%20small.jpg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
 body.page-music .track-art.track-art--why-are-we-here::after,
-body.page-music .track-art.track-art--on-the-rays::after {
+body.page-music .track-art.track-art--on-the-rays::after,
+body.page-music .track-art.track-art--big-easy-homeboy::after {
   content: none !important;
   display: none !important;
 }
