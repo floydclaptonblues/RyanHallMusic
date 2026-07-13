@@ -26,6 +26,8 @@
       artClass += ' track-art--on-the-rays';
     } else if (track.genre === 'Avant-Garde' || track.genre === 'Ambient') {
       artClass += ' track-art--why-are-we-here';
+    } else if (track.genre === 'Blues') {
+      artClass += ' track-art--big-easy-homeboy';
     }
 
     return `
