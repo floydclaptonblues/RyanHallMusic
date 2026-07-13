@@ -1,0 +1,142 @@
+/* Clear Windows 95/98 panes: keep the bevels and controls, reveal the page backgrounds. */
+
+body.inner .site-header {
+  background: rgba(192,192,192,.30) !important;
+  box-shadow: 1px 1px 0 rgba(0,0,0,.36) !important;
+}
+
+body.inner .main-nav a,
+body.inner .nav-toggle {
+  background: rgba(192,192,192,.58) !important;
+}
+
+body.inner .main-nav a[aria-current="page"] {
+  background: rgba(176,176,176,.64) !important;
+}
+
+body.inner .page-heading h1,
+body.page-music .genre-titlebar,
+body.page-pictures .picture-section > h2 {
+  background: linear-gradient(90deg, rgba(0,0,128,.62), rgba(16,132,208,.52)) !important;
+}
+
+body.inner .page-heading .kicker,
+body.inner .section-kicker,
+body.inner .meta {
+  color: #fff !important;
+  background: rgba(0,0,0,.18) !important;
+  border-color: rgba(255,255,255,.48) !important;
+  text-shadow: 1px 1px 2px #000 !important;
+}
+
+body.inner .page-heading p:last-child {
+  color: #fff !important;
+  background: rgba(0,0,0,.16) !important;
+  border-color: rgba(255,255,255,.52) rgba(0,0,0,.50) rgba(0,0,0,.50) rgba(255,255,255,.52) !important;
+  text-shadow: 1px 1px 2px #000, 0 0 5px rgba(0,0,0,.78) !important;
+}
+
+body.inner .glass-panel,
+body.inner .track-card,
+body.inner .video-card,
+body.inner .photo-card,
+body.inner .song-copy,
+body.inner .notes-grid article,
+body.inner.page-contact .glass-panel,
+body.page-music .genre-directory,
+body.page-videos .video-grid,
+body.page-pictures .picture-section,
+body.page-contact .contact-grid,
+body.page-song .song-shell,
+body.page-song .notes-grid {
+  background: rgba(192,192,192,.10) !important;
+  box-shadow: 1px 1px 0 rgba(0,0,0,.28) !important;
+  backdrop-filter: none !important;
+}
+
+body.page-music .genre-grid,
+body.page-pictures .photo-grid,
+body.page-pictures .motion-grid {
+  background: rgba(0,0,0,.06) !important;
+}
+
+body.page-music .genre-grid .track-card,
+body.page-videos .video-card,
+body.page-videos .video-card > button,
+body.page-contact .contact-grid article,
+body.page-song .song-art-large,
+body.page-song .song-copy {
+  background: transparent !important;
+}
+
+body.inner .glass-panel p,
+body.inner .glass-panel li,
+body.inner .track-copy h2,
+body.inner .track-copy p,
+body.inner .video-copy h2,
+body.inner .video-copy p,
+body.inner .song-copy h1,
+body.inner .song-copy p,
+body.inner .notes-grid h2,
+body.inner .notes-grid p,
+body.inner .contact-grid h2,
+body.inner .contact-grid p,
+body.inner .contact-list li,
+body.inner .photo-card figcaption,
+body.inner .track-copy .subtitle,
+body.inner .video-card .subtitle,
+body.inner .song-copy .song-subtitle,
+body.inner .placeholder-note {
+  color: #fffdf5 !important;
+  text-shadow: 1px 1px 2px #000, 0 0 5px rgba(0,0,0,.76) !important;
+}
+
+body.page-music .track-copy h2,
+body.page-videos .video-copy h2,
+body.page-contact .contact-grid article > h2 {
+  background: transparent !important;
+}
+
+body.page-pictures .photo-card figcaption {
+  background: rgba(0,0,0,.10) !important;
+}
+
+body.page-contact .contact-grid article > h2 {
+  border-bottom-color: rgba(255,255,255,.48) !important;
+}
+
+body.page-contact .contact-list li {
+  border-bottom-color: rgba(255,255,255,.42) !important;
+}
+
+body.inner .audio-dock {
+  background: rgba(192,192,192,.46) !important;
+  box-shadow: 0 -1px 0 rgba(0,0,0,.28) !important;
+}
+
+body.inner .audio-dock,
+body.inner .audio-dock strong,
+body.inner .audio-dock small,
+body.inner .audio-dock span {
+  color: #000 !important;
+  text-shadow: 1px 1px 0 rgba(255,255,255,.82) !important;
+}
+
+body.inner .chrome-button,
+body.inner .text-button,
+body.inner .play-button {
+  background: rgba(192,192,192,.82) !important;
+}
+
+body.inner .site-footer {
+  color: #fff !important;
+  background: transparent !important;
+  border: 0 !important;
+  text-shadow: 1px 1px 2px #000 !important;
+}
+
+@media (max-width: 850px) {
+  body.inner .main-nav {
+    background: rgba(192,192,192,.72) !important;
+  }
+}
