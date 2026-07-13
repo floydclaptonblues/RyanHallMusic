@@ -11,6 +11,9 @@
     const chicagoHref = script
       ? new URL('../css/inner-chicago-subtext.css?v=20260713-7', script.src).href
       : 'assets/css/inner-chicago-subtext.css?v=20260713-7';
+    const desktopHref = script
+      ? new URL('../css/inner-win98-desktop.css?v=20260713-8', script.src).href
+      : 'assets/css/inner-win98-desktop.css?v=20260713-8';
 
     if (!document.querySelector('link[data-inner-theme="win95-clear"]')) {
       const theme = document.createElement('link');
@@ -34,6 +37,14 @@
       chicago.href = chicagoHref;
       chicago.dataset.innerSubtext = 'chicago';
       document.head.appendChild(chicago);
+    }
+
+    if (!document.querySelector('link[data-inner-layout="win98-desktop"]')) {
+      const desktop = document.createElement('link');
+      desktop.rel = 'stylesheet';
+      desktop.href = desktopHref;
+      desktop.dataset.innerLayout = 'win98-desktop';
+      document.head.appendChild(desktop);
     }
   }
 
