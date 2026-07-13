@@ -1,0 +1,109 @@
+/* 404-EVER: the deliberately misplaced media archive. */
+body.inner.page-404-ever {
+  background-color: #020204;
+}
+
+body.inner.page-404-ever::before {
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(37,28,96,.34), transparent 31%),
+    radial-gradient(circle at 84% 74%, rgba(0,90,110,.24), transparent 35%),
+    linear-gradient(135deg, #05030b, #000 58%, #071015);
+  clip-path: none;
+  filter: none;
+}
+
+body.inner.page-404-ever::after {
+  inset: 0;
+  height: auto;
+  clip-path: none;
+  opacity: .42;
+  background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,.035) 0 1px, transparent 1px 4px),
+    repeating-linear-gradient(90deg, rgba(70,90,130,.025) 0 1px, transparent 1px 7px);
+}
+
+body.page-404-ever .page-heading--forever {
+  padding-bottom: clamp(25px, 5vw, 60px);
+}
+
+body.page-404-ever .page-heading--forever h1 {
+  margin: 0;
+}
+
+body.page-404-ever .forever-section {
+  margin-top: 28px;
+}
+
+body.page-404-ever .forever-section > h2 {
+  margin: 0 0 14px;
+  padding: 6px 9px;
+  color: #fff;
+  background: linear-gradient(90deg, #000080, #1084d0);
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  font-family: var(--chicago);
+  font-size: clamp(24px, 4vw, 40px);
+  letter-spacing: -.04em;
+  text-shadow: 1px 1px 0 #000;
+}
+
+body.page-404-ever .forever-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+body.page-404-ever .forever-card {
+  margin: 0;
+  padding: 7px;
+  overflow: hidden;
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  background: rgba(192,192,192,.82);
+  box-shadow: 2px 2px 0 rgba(0,0,0,.68);
+}
+
+body.page-404-ever .forever-card img,
+body.page-404-ever .forever-card video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #000;
+}
+
+body.page-404-ever .forever-card figcaption,
+body.page-404-ever .forever-copy {
+  padding: 10px 7px 6px;
+  color: #000 !important;
+  text-shadow: 1px 1px 0 rgba(255,255,255,.76) !important;
+}
+
+body.page-404-ever .forever-card strong,
+body.page-404-ever .forever-copy h3 {
+  display: block;
+  margin: 0 0 4px;
+  font-family: var(--chicago);
+  font-size: 18px;
+  letter-spacing: -.025em;
+}
+
+body.page-404-ever .forever-copy p {
+  margin: 0;
+  font-size: 12px;
+}
+
+body.page-404-ever .forever-card--wide {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 760px) {
+  body.page-404-ever .forever-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.page-404-ever .forever-card--wide {
+    grid-column: auto;
+  }
+}
