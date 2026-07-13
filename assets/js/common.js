@@ -14,6 +14,9 @@
     const desktopHref = script
       ? new URL('../css/inner-win98-desktop.css?v=20260713-8', script.src).href
       : 'assets/css/inner-win98-desktop.css?v=20260713-8';
+    const clearWindowsHref = script
+      ? new URL('../css/inner-clear-windows.css?v=20260713-9', script.src).href
+      : 'assets/css/inner-clear-windows.css?v=20260713-9';
 
     if (!document.querySelector('link[data-inner-theme="win95-clear"]')) {
       const theme = document.createElement('link');
@@ -45,6 +48,14 @@
       desktop.href = desktopHref;
       desktop.dataset.innerLayout = 'win98-desktop';
       document.head.appendChild(desktop);
+    }
+
+    if (!document.querySelector('link[data-inner-windows="clear"]')) {
+      const clearWindows = document.createElement('link');
+      clearWindows.rel = 'stylesheet';
+      clearWindows.href = clearWindowsHref;
+      clearWindows.dataset.innerWindows = 'clear';
+      document.head.appendChild(clearWindows);
     }
   }
 
