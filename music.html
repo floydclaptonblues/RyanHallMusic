@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Listen to music by Ryan Hall.">
+  <meta name="description" content="Listen to music by Ryan Hall, organized by genre.">
   <title>Music — Ryan Hall</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/site.css">
-  <link rel="stylesheet" href="assets/css/page-backgrounds.css?v=20260713-2">
-  <link rel="stylesheet" href="assets/css/inner-win95-clear.css?v=20260713-2">
+  <link rel="stylesheet" href="assets/css/page-backgrounds.css?v=20260713-4">
+  <link rel="stylesheet" href="assets/css/inner-win95-clear.css?v=20260713-4">
+  <link rel="stylesheet" href="assets/css/inner-text-contrast.css?v=20260713-4">
+  <link rel="stylesheet" href="assets/css/music-genres.css?v=20260713-4">
 </head>
 <body class="inner page-music">
   <a class="skip-link" href="#content">Skip to music</a>
@@ -24,9 +26,9 @@
     <header class="page-heading">
       <p class="kicker">On demand</p>
       <h1>Music</h1>
-      <p>Choose a recording. The player stays ready while you browse the collection.</p>
+      <p>Browse the recordings by genre. The player stays ready while you move between directories.</p>
     </header>
-    <section class="music-grid" id="music-grid" aria-label="Music catalog"></section>
+    <div class="genre-catalog" id="music-grid" aria-label="Music catalog grouped by genre"></div>
   </main>
   <div class="audio-dock" aria-label="Audio player">
     <button class="chrome-button" id="dock-toggle" type="button" aria-label="Play">▶</button>
@@ -41,8 +43,8 @@
     <audio id="audio" preload="metadata"></audio>
   </div>
   <footer class="site-footer">Ryan Hall · <span data-year></span></footer>
-  <script src="assets/js/catalog.js"></script>
-  <script src="assets/js/common.js?v=20260713-2"></script>
-  <script src="assets/js/music.js"></script>
+  <script src="assets/js/catalog.js?v=20260713-4"></script>
+  <script src="assets/js/common.js?v=20260713-4"></script>
+  <script src="assets/js/music.js?v=20260713-4"></script>
 </body>
 </html>
