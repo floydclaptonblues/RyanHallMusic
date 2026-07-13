@@ -2,11 +2,14 @@
   if (document.body.classList.contains('inner')) {
     const script = document.currentScript;
     const themeHref = script
-      ? new URL('../css/inner-win95-clear.css?v=20260713-3', script.src).href
-      : 'assets/css/inner-win95-clear.css?v=20260713-3';
+      ? new URL('../css/inner-win95-clear.css?v=20260713-5', script.src).href
+      : 'assets/css/inner-win95-clear.css?v=20260713-5';
     const contrastHref = script
-      ? new URL('../css/inner-text-contrast.css?v=20260713-3', script.src).href
-      : 'assets/css/inner-text-contrast.css?v=20260713-3';
+      ? new URL('../css/inner-text-contrast.css?v=20260713-5', script.src).href
+      : 'assets/css/inner-text-contrast.css?v=20260713-5';
+    const chicagoHref = script
+      ? new URL('../css/inner-chicago-subtext.css?v=20260713-5', script.src).href
+      : 'assets/css/inner-chicago-subtext.css?v=20260713-5';
 
     if (!document.querySelector('link[data-inner-theme="win95-clear"]')) {
       const theme = document.createElement('link');
@@ -22,6 +25,14 @@
       contrast.href = contrastHref;
       contrast.dataset.innerContrast = 'high';
       document.head.appendChild(contrast);
+    }
+
+    if (!document.querySelector('link[data-inner-subtext="chicago"]')) {
+      const chicago = document.createElement('link');
+      chicago.rel = 'stylesheet';
+      chicago.href = chicagoHref;
+      chicago.dataset.innerSubtext = 'chicago';
+      document.head.appendChild(chicago);
     }
   }
 
