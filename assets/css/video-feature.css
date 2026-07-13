@@ -1,0 +1,53 @@
+/* Single-film presentation for the Videos page. */
+body.page-videos .video-grid {
+  grid-template-columns: minmax(0, 960px);
+  justify-content: center;
+}
+
+body.page-videos .video-card {
+  width: 100%;
+  overflow: hidden;
+}
+
+body.page-videos .video-card .video-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "title duration"
+    "subtitle duration";
+  align-items: center;
+  column-gap: 24px;
+  padding: 22px 24px 24px;
+}
+
+body.page-videos .video-card h2 {
+  grid-area: title;
+}
+
+body.page-videos .video-card .subtitle {
+  grid-area: subtitle;
+  min-height: 0;
+  margin: 8px 0 0;
+}
+
+body.page-videos .video-card .meta {
+  grid-area: duration;
+  margin: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 650px) {
+  body.page-videos .video-card .video-copy {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "subtitle"
+      "duration";
+    row-gap: 7px;
+    padding: 18px;
+  }
+
+  body.page-videos .video-card .meta {
+    margin-top: 4px;
+  }
+}
