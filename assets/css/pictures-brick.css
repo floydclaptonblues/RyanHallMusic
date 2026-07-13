@@ -1,0 +1,105 @@
+/* Three-image editorial brick for the Pictures page. */
+body.page-pictures .picture-section {
+  margin-top: 24px;
+}
+
+body.page-pictures .picture-brick {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
+  height: clamp(560px, 68vw, 780px);
+}
+
+body.page-pictures .picture-brick .photo-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 7px;
+  overflow: hidden;
+  break-inside: auto;
+}
+
+body.page-pictures .picture-brick .photo-card--st-basil {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+body.page-pictures .picture-brick .photo-card--hills {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+body.page-pictures .picture-brick .photo-card--station {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+body.page-pictures .picture-brick .photo-card button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 11px;
+}
+
+body.page-pictures .picture-brick .photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .35s ease;
+}
+
+body.page-pictures .picture-brick .photo-card button:hover img,
+body.page-pictures .picture-brick .photo-card button:focus-visible img {
+  transform: scale(1.025);
+}
+
+body.page-pictures .picture-brick .photo-card figcaption {
+  position: absolute;
+  left: 7px;
+  right: 7px;
+  bottom: 7px;
+  z-index: 2;
+  padding: 34px 14px 12px;
+  border-radius: 0 0 11px 11px;
+  color: #fff;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, .82));
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .95);
+  pointer-events: none;
+}
+
+body.page-pictures .picture-brick .photo-card figcaption strong {
+  font-family: var(--chicago);
+  font-size: 15px;
+  letter-spacing: -.02em;
+}
+
+@media (max-width: 760px) {
+  body.page-pictures .picture-brick {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    height: auto;
+  }
+
+  body.page-pictures .picture-brick .photo-card--st-basil,
+  body.page-pictures .picture-brick .photo-card--hills,
+  body.page-pictures .picture-brick .photo-card--station {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  body.page-pictures .picture-brick .photo-card--st-basil {
+    aspect-ratio: 4 / 5;
+  }
+
+  body.page-pictures .picture-brick .photo-card--hills,
+  body.page-pictures .picture-brick .photo-card--station {
+    aspect-ratio: 16 / 10;
+  }
+}
