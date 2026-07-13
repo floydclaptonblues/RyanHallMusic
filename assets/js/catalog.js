@@ -11,6 +11,7 @@ window.RYAN_CATALOG = {
     { slug: 'curtain-call-blues', title: 'Curtain Call Blues', subtitle: '', genre: 'Blues', file: 'assets/audio/curtain-call-blues.mp3', duration: '3:58' }
   ],
   videos: [
-    { slug: 'the-deep-end-of-time', title: 'The Deep End of Time', subtitle: 'Ethereal Acoustic Guitar Journey', file: 'assets/video/the-deep-end-of-time.mp4', poster: 'assets/images/posters/the-deep-end-of-time.jpg', duration: '3:47' }
+    { slug: 'the-deep-end-of-time', title: 'The Deep End of Time', subtitle: 'Ethereal Acoustic Guitar Journey', file: 'assets/video/the-deep-end-of-time.mp4', poster: 'assets/images/posters/the-deep-end-of-time.jpg', duration: '3:47' },
+    { slug: 'me-and-the-devil-blues', title: 'Robert Johnson — Me and the Devil Blues', subtitle: 'Acoustic Cover · Live Delta Blues Performance', file: 'assets/Robert_Johnson_Me_and_the_Devil_Blues_Ryan_Hall_GitHub.mp4', duration: '4:13' }
   ]
 };
