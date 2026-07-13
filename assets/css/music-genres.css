@@ -65,7 +65,17 @@ body.page-music .track-art.track-art--why-are-we-here {
   background-size: cover !important;
 }
 
-body.page-music .track-art.track-art--why-are-we-here::after {
+/* Shared cover for every Rock recording. */
+body.page-music .track-art.track-art--on-the-rays {
+  background-color: #000 !important;
+  background-image: url("../images/art/On%20The%20Rays%20Of%20The%20Sun.jpg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+body.page-music .track-art.track-art--why-are-we-here::after,
+body.page-music .track-art.track-art--on-the-rays::after {
   content: none !important;
   display: none !important;
 }
