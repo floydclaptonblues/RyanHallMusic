@@ -11,12 +11,6 @@ window.RYAN_CATALOG = {
     { slug: 'curtain-call-blues', title: 'Curtain Call Blues', subtitle: '', genre: 'Blues', file: 'assets/audio/curtain-call-blues.mp3', duration: '3:58' }
   ],
   videos: [
-    { slug: 'the-deep-end-of-time', title: 'The Deep End of Time', subtitle: 'Ethereal Acoustic Guitar Journey', file: 'assets/video/the-deep-end-of-time.mp4', poster: 'assets/images/posters/the-deep-end-of-time.jpg', duration: '3:47' },
-    { slug: 'pure-moods', title: 'Pure Moods', subtitle: '', file: 'assets/video/pure-moods.mp4', poster: 'assets/images/posters/pure-moods.jpg', duration: '1:01' },
-    { slug: '3d-t-rex-chase', title: '3D T-Rex Chase', subtitle: '', file: 'assets/video/3d-t-rex-chase.mp4', poster: 'assets/images/posters/3d-t-rex-chase.jpg', duration: '0:39' },
-    { slug: 'april-11-2025', title: 'April 11, 2025', subtitle: 'Field Note', file: 'assets/video/april-11-2025.mp4', poster: 'assets/images/posters/april-11-2025.jpg', duration: '0:13' },
-    { slug: 'visual-study-one', title: 'Visual Study I', subtitle: '', file: 'assets/video/visual-study-one.mp4', poster: 'assets/images/posters/visual-study-one.jpg', duration: '0:05' },
-    { slug: 'visual-study-two', title: 'Visual Study II', subtitle: '', file: 'assets/video/visual-study-two.mp4', poster: 'assets/images/posters/visual-study-two.jpg', duration: '0:05' },
-    { slug: 'visual-study-three', title: 'Visual Study III', subtitle: '', file: 'assets/video/visual-study-three.mp4', poster: 'assets/images/posters/visual-study-three.jpg', duration: '0:05' }
+    { slug: 'the-deep-end-of-time', title: 'The Deep End of Time', subtitle: 'Ethereal Acoustic Guitar Journey', file: 'assets/video/the-deep-end-of-time.mp4', poster: 'assets/images/posters/the-deep-end-of-time.jpg', duration: '3:47' }
   ]
 };
