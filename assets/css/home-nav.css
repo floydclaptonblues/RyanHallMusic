@@ -1,0 +1,104 @@
+/* Compact Windows 95/98 navigation for the homepage.
+   Keep the header shrink-wrapped; never turn it into a full-width taskbar. */
+.home .site-header {
+  top: 18px;
+  width: max-content;
+  max-width: calc(100vw - 44px);
+  min-height: 48px;
+  grid-template-columns: auto auto;
+  gap: 12px;
+  padding: 5px 6px 5px 10px;
+  border: 2px solid;
+  border-color: #ffffff #404040 #404040 #ffffff;
+  border-radius: 0;
+  color: #000;
+  background: rgba(192, 192, 192, .88);
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, .46);
+  backdrop-filter: none;
+}
+
+.home .brand,
+.home .brand span {
+  color: #000;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, .92);
+}
+
+.home .main-nav {
+  gap: 3px;
+}
+
+.home .main-nav a {
+  min-height: 34px;
+  padding: 0 10px;
+  border: 2px solid;
+  border-color: #ffffff #404040 #404040 #ffffff;
+  border-radius: 0;
+  color: #000;
+  background: rgba(192, 192, 192, .96);
+  box-shadow: none;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+.home .main-nav a:hover,
+.home .main-nav a:focus-visible {
+  color: #000;
+  background: #d4d0c8;
+  border-color: #ffffff #404040 #404040 #ffffff;
+  outline: 1px dotted #000;
+  outline-offset: -5px;
+}
+
+.home .main-nav a[aria-current="page"] {
+  color: #000;
+  background: #b8b8b8;
+  border-color: #404040 #ffffff #ffffff #404040;
+  box-shadow: inset 1px 1px 0 #808080;
+  outline: none;
+}
+
+.home .nav-toggle {
+  width: 38px;
+  height: 36px;
+  border: 2px solid;
+  border-color: #ffffff #404040 #404040 #ffffff;
+  border-radius: 0;
+  color: #000;
+  background: #c0c0c0;
+  box-shadow: none;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+.home .nav-toggle:active,
+.home .nav-toggle[aria-expanded="true"] {
+  border-color: #404040 #ffffff #ffffff #404040;
+  background: #b8b8b8;
+}
+
+@media (max-width: 850px) {
+  .home .site-header {
+    width: min(360px, calc(100vw - 28px));
+    max-width: calc(100vw - 28px);
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px;
+  }
+
+  .home .main-nav {
+    left: 0;
+    right: 0;
+    top: calc(100% + 4px);
+    width: auto;
+    padding: 4px;
+    border: 2px solid;
+    border-color: #ffffff #404040 #404040 #ffffff;
+    border-radius: 0;
+    background: rgba(192, 192, 192, .97);
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, .46);
+    backdrop-filter: none;
+  }
+
+  .home .main-nav a {
+    min-height: 36px;
+    padding: 0 10px;
+    border-bottom: 2px solid #404040;
+  }
+}
