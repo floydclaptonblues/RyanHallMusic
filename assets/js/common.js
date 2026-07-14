@@ -185,6 +185,16 @@
     });
   }
 
+  if (!document.querySelector('script[data-visitor-counter-script]')) {
+    const visitorCounterScript = document.createElement('script');
+    visitorCounterScript.src = script
+      ? new URL('visitor-counter.js?v=20260714-1', script.src).href
+      : 'assets/js/visitor-counter.js?v=20260714-1';
+    visitorCounterScript.async = true;
+    visitorCounterScript.dataset.visitorCounterScript = 'retro-alarm-clock';
+    document.body.appendChild(visitorCounterScript);
+  }
+
   const year = document.querySelector('[data-year]');
   if (year) year.textContent = new Date().getFullYear();
 })();
