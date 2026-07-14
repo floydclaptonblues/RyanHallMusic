@@ -33,8 +33,8 @@ body.inner.page-music::before {
 
 body.inner.page-videos::before {
   background-image:
-    linear-gradient(180deg, rgba(3,5,12,.03), rgba(2,4,10,.10)),
-    url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzZkcHoxMTV4aGw3cXFmcDhla3YyYW16eHZjYmdpNjVsOW91MmN3MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LDoYWD9UbrHdisiffx/giphy.gif");
+    linear-gradient(180deg, rgba(3,5,12,.08), rgba(2,4,10,.20)),
+    url("https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWduY3lzenZha3liZGo1djR2OWRzcTFlbGNweDJrazFnZTNrcHQ4byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5IvO3k8HBOpK2ZxYx5/giphy.gif");
 }
 
 body.inner.page-pictures::before {
