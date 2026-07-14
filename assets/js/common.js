@@ -188,10 +188,10 @@
   if (!document.querySelector('script[data-visitor-counter-script]')) {
     const visitorCounterScript = document.createElement('script');
     visitorCounterScript.src = script
-      ? new URL('visitor-counter.js?v=20260714-1', script.src).href
-      : 'assets/js/visitor-counter.js?v=20260714-1';
+      ? new URL('visitor-counter.js?v=20260714-2', script.src).href
+      : 'assets/js/visitor-counter.js?v=20260714-2';
     visitorCounterScript.async = true;
-    visitorCounterScript.dataset.visitorCounterScript = 'retro-alarm-clock';
+    visitorCounterScript.dataset.visitorCounterScript = 'silent';
     document.body.appendChild(visitorCounterScript);
   }
 
