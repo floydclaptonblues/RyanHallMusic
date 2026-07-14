@@ -17,6 +17,9 @@
     const clearWindowsHref = script
       ? new URL('../css/inner-clear-windows.css?v=20260713-9', script.src).href
       : 'assets/css/inner-clear-windows.css?v=20260713-9';
+    const sharedNavHref = script
+      ? new URL('../css/home-nav.css?v=20260714-5', script.src).href
+      : 'assets/css/home-nav.css?v=20260714-5';
 
     if (!document.querySelector('link[data-inner-theme="win95-clear"]')) {
       const theme = document.createElement('link');
@@ -58,19 +61,18 @@
       document.head.appendChild(clearWindows);
     }
 
-    const header = document.querySelector('.site-header');
-    const headerMark = document.querySelector('.header-mark');
-    if (headerMark) headerMark.remove();
-
-    if (header) {
-      const syncHeaderColumns = () => {
-        header.style.gridTemplateColumns = window.matchMedia('(max-width: 850px)').matches
-          ? '1fr auto'
-          : 'auto 1fr';
-      };
-      syncHeaderColumns();
-      window.addEventListener('resize', syncHeaderColumns, { passive: true });
+    if (!document.querySelector('link[data-shared-navigation]')) {
+      const sharedNav = document.createElement('link');
+      sharedNav.rel = 'stylesheet';
+      sharedNav.href = sharedNavHref;
+      sharedNav.dataset.sharedNavigation = 'homepage-design';
+      document.head.appendChild(sharedNav);
     }
+
+    const brand = document.querySelector('.site-header .brand');
+    const headerMark = document.querySelector('.site-header .header-mark');
+    if (brand) brand.remove();
+    if (headerMark) headerMark.remove();
   }
 
   /* Every individual song page contains .song-shell. */
