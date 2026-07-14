@@ -23,6 +23,17 @@ window.RYAN_CATALOG = {
       personnel: 'Ryan Hall - Guitar & Vocals · Roberto Forlini - Drums · Graziano Brufani - Bass',
       production: 'Filmed by the BBC · Promoter: Benedetto Cataldi',
       thanks: 'Special thanks to Comune di Acquapendente.'
+    },
+    {
+      slug: 'house-of-the-rising-sun-live-lucera-2022',
+      title: 'House Of The Rising Sun - Live in Lucera - August 8th, 2022',
+      subtitle: 'Lucera, Italia',
+      file: 'assets/video/Ryan_Hall_House_Of_The_Rising_Sun_Italy_2022_Under_25MB.mp4',
+      duration: '7:45',
+      featured: true,
+      personnel: 'Ryan Hall - Guitar and Vocals · John George - Bass · Francesco Lattore - Drums',
+      production: 'Filmed and edited by Quentin Cretaz',
+      thanks: 'Concert brought to you by Roberto Notarangelo and the Comune di Lucera.'
     }
   ]
 };
