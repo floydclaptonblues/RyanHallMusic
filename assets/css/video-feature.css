@@ -1,4 +1,4 @@
-/* Curated two-film presentation for the Videos page. */
+/* Curated film and live-performance presentation for the Videos page. */
 body.page-videos .video-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
@@ -7,6 +7,10 @@ body.page-videos .video-grid {
 body.page-videos .video-card {
   width: 100%;
   overflow: hidden;
+}
+
+body.page-videos .video-card--wide {
+  grid-column: 1 / -1;
 }
 
 body.page-videos .video-poster .video-thumb {
@@ -22,7 +26,8 @@ body.page-videos .video-card .video-copy {
   grid-template-columns: minmax(0, 1fr) auto;
   grid-template-areas:
     "title duration"
-    "subtitle duration";
+    "subtitle duration"
+    "details details";
   align-items: center;
   column-gap: 18px;
   padding: 20px 22px 22px;
@@ -44,9 +49,29 @@ body.page-videos .video-card .meta {
   white-space: nowrap;
 }
 
+body.page-videos .video-details {
+  grid-area: details;
+  display: grid;
+  gap: 5px;
+  margin-top: 17px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(5, 68, 112, .18);
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+body.page-videos .video-details p {
+  margin: 0;
+}
+
 @media (max-width: 850px) {
   body.page-videos .video-grid {
     grid-template-columns: 1fr;
+  }
+
+  body.page-videos .video-card--wide {
+    grid-column: auto;
   }
 }
 
@@ -56,12 +81,17 @@ body.page-videos .video-card .meta {
     grid-template-areas:
       "title"
       "subtitle"
-      "duration";
+      "duration"
+      "details";
     row-gap: 7px;
     padding: 18px;
   }
 
   body.page-videos .video-card .meta {
     margin-top: 4px;
+  }
+
+  body.page-videos .video-details {
+    margin-top: 10px;
   }
 }
