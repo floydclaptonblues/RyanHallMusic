@@ -12,6 +12,17 @@ window.RYAN_CATALOG = {
   ],
   videos: [
     { slug: 'the-deep-end-of-time', title: 'The Deep End of Time', subtitle: 'Ethereal Acoustic Guitar Journey', file: 'assets/video/the-deep-end-of-time.mp4', poster: 'assets/images/posters/the-deep-end-of-time.jpg', duration: '3:47' },
-    { slug: 'me-and-the-devil-blues', title: 'Robert Johnson — Me and the Devil Blues', subtitle: 'Cover by Ryan Hall - 2025', file: 'assets/Robert_Johnson_Me_and_the_Devil_Blues_Ryan_Hall_GitHub.mp4', duration: '4:13' }
+    { slug: 'me-and-the-devil-blues', title: 'Robert Johnson — Me and the Devil Blues', subtitle: 'Cover by Ryan Hall - 2025', file: 'assets/Robert_Johnson_Me_and_the_Devil_Blues_Ryan_Hall_GitHub.mp4', duration: '4:13' },
+    {
+      slug: 'hey-joe-live-in-italy-2017',
+      title: 'Hey Joe - Live in Italy - August 28th, 2017',
+      subtitle: 'Acquapendente Music Fest · Acquapendente, Lazio, Italia',
+      file: 'assets/video/Hey_Joe_Live_Italy_Balanced_Under_25MB.mp4',
+      duration: '8:26',
+      featured: true,
+      personnel: 'Ryan Hall - Guitar & Vocals · Roberto Forlini - Drums · Graziano Brufani - Bass',
+      production: 'Filmed by the BBC · Promoter: Benedetto Cataldi',
+      thanks: 'Special thanks to Comune di Acquapendente.'
+    }
   ]
 };
