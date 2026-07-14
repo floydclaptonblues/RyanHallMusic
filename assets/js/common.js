@@ -57,6 +57,20 @@
       clearWindows.dataset.innerWindows = 'clear';
       document.head.appendChild(clearWindows);
     }
+
+    const header = document.querySelector('.site-header');
+    const headerMark = document.querySelector('.header-mark');
+    if (headerMark) headerMark.remove();
+
+    if (header) {
+      const syncHeaderColumns = () => {
+        header.style.gridTemplateColumns = window.matchMedia('(max-width: 850px)').matches
+          ? '1fr auto'
+          : 'auto 1fr';
+      };
+      syncHeaderColumns();
+      window.addEventListener('resize', syncHeaderColumns, { passive: true });
+    }
   }
 
   /* Every individual song page contains .song-shell. */
