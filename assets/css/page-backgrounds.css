@@ -31,10 +31,9 @@ body.inner.page-music::before {
   will-change: transform;
 }
 
+/* Videos now uses the seamless layered solar-system environment. */
 body.inner.page-videos::before {
-  background-image:
-    linear-gradient(180deg, rgba(3,5,12,.08), rgba(2,4,10,.20)),
-    url("https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWduY3lzenZha3liZGo1djR2OWRzcTFlbGNweDJrazFnZTNrcHQ4byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5IvO3k8HBOpK2ZxYx5/giphy.gif");
+  background-image: linear-gradient(180deg, rgba(3,5,12,.08), rgba(2,4,10,.20));
 }
 
 body.inner.page-pictures::before {
