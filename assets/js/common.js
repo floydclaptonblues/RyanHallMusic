@@ -17,6 +17,9 @@
     const clearWindowsHref = script
       ? new URL('../css/inner-clear-windows.css?v=20260713-9', script.src).href
       : 'assets/css/inner-clear-windows.css?v=20260713-9';
+    const mobileNavHref = script
+      ? new URL('../css/inner-mobile-nav.css?v=20260715-1', script.src).href
+      : 'assets/css/inner-mobile-nav.css?v=20260715-1';
 
     if (!document.querySelector('link[data-inner-theme="win95-clear"]')) {
       const theme = document.createElement('link');
@@ -56,6 +59,14 @@
       clearWindows.href = clearWindowsHref;
       clearWindows.dataset.innerWindows = 'clear';
       document.head.appendChild(clearWindows);
+    }
+
+    if (!document.querySelector('link[data-inner-mobile-nav]')) {
+      const mobileNav = document.createElement('link');
+      mobileNav.rel = 'stylesheet';
+      mobileNav.href = mobileNavHref;
+      mobileNav.dataset.innerMobileNav = 'homepage-row';
+      document.head.appendChild(mobileNav);
     }
 
     const header = document.querySelector('.site-header');
