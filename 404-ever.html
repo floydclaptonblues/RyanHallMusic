@@ -12,6 +12,198 @@
   <link rel="stylesheet" href="assets/css/inner-win98-desktop.css?v=20260713-8">
   <link rel="stylesheet" href="assets/css/inner-clear-windows.css?v=20260713-9">
   <link rel="stylesheet" href="assets/css/404-ever.css?v=20260714-7">
+  <style>
+    .endless-module {
+      margin: 34px 0 0;
+      overflow: hidden;
+      font-family: "Arial Black", Arial, sans-serif;
+      background: linear-gradient(270deg, #ff00cc, #00ffff);
+      background-size: 400% 400%;
+      animation: endlessBgShift 12s ease infinite;
+      text-align: center;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 2px #404040, 0 18px 46px rgba(0, 0, 0, .28);
+    }
+
+    @keyframes endlessBgShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .endless-start-bar {
+      width: 100%;
+      min-height: 50px;
+      background: #c0c0c0;
+      border-top: 2px solid #fff;
+      border-left: 2px solid #fff;
+      border-right: 2px solid #404040;
+      border-bottom: 2px solid #404040;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      padding: 6px 10px;
+      box-sizing: border-box;
+      font-size: 16px;
+      color: #000;
+      text-shadow: 1px 1px #fff;
+      font-family: Tahoma, sans-serif;
+    }
+
+    .endless-start-btn {
+      appearance: none;
+      background: #e0e0e0;
+      border: 2px outset #fff;
+      border-radius: 0;
+      padding: 3px 12px;
+      margin-right: 15px;
+      cursor: pointer;
+      color: #000;
+      font: inherit;
+      font-weight: bold;
+      line-height: 1.2;
+      text-shadow: 1px 1px #fff;
+      transition: all .1s ease-in-out;
+    }
+
+    .endless-start-btn.flash {
+      animation: endlessFlashButton 1s infinite alternate;
+    }
+
+    @keyframes endlessFlashButton {
+      0% { background: #e0e0e0; color: #000; }
+      50% { background: #ff00cc; color: #fff; }
+      100% { background: #00ffff; color: #000; }
+    }
+
+    .endless-start-btn:hover {
+      background: #dcdcdc;
+      border: 2px inset #fff;
+    }
+
+    .endless-start-btn:active {
+      background: #c0c0c0;
+      border: 2px inset #404040;
+    }
+
+    .endless-top-bar {
+      justify-content: flex-start;
+    }
+
+    .endless-bottom-bar {
+      justify-content: space-between;
+    }
+
+    .endless-bottom-bar .endless-start-btn {
+      margin-right: 15px;
+    }
+
+    .endless-title {
+      font-size: clamp(3rem, 9vw, 6rem);
+      line-height: .95;
+      margin: 28px 12px 12px;
+      background: linear-gradient(90deg, #ff00cc, #00ffff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      animation: endlessTitleFlash 1.5s infinite;
+      text-shadow: none;
+    }
+
+    @keyframes endlessTitleFlash {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: .3; }
+    }
+
+    .endless-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+      gap: 20px;
+      padding: 28px 20px 34px;
+    }
+
+    .endless-gallery video,
+    .endless-gallery img {
+      display: block;
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 255, 255, .5);
+      animation: endlessFloaty 6s ease-in-out infinite alternate, endlessFadeIn 2s ease-in-out forwards;
+      opacity: 0;
+      transition: transform .4s ease, box-shadow .4s ease;
+    }
+
+    .endless-gallery video:hover,
+    .endless-gallery img:hover {
+      animation-play-state: paused;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 0, 255, .7);
+    }
+
+    @keyframes endlessFloaty {
+      0% { transform: translateY(0) translateX(0); }
+      50% { transform: translateY(-10px) translateX(5px); }
+      100% { transform: translateY(0) translateX(0); }
+    }
+
+    @keyframes endlessFadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    .endless-clock {
+      margin-left: auto;
+      white-space: nowrap;
+      font-weight: bold;
+    }
+
+    @media (max-width: 640px) {
+      .endless-start-bar {
+        min-height: 42px;
+        padding: 5px 6px;
+        overflow-x: auto;
+        font-size: 13px;
+      }
+
+      .endless-start-btn {
+        flex: 0 0 auto;
+        margin-right: 7px;
+        padding: 3px 8px;
+      }
+
+      .endless-title {
+        margin-top: 24px;
+      }
+
+      .endless-gallery {
+        gap: 16px;
+        padding: 22px 12px 28px;
+      }
+
+      .endless-gallery video,
+      .endless-gallery img {
+        height: 220px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .endless-module,
+      .endless-title,
+      .endless-gallery video,
+      .endless-gallery img,
+      .endless-start-btn.flash {
+        animation: none;
+      }
+
+      .endless-gallery video,
+      .endless-gallery img {
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 <body class="inner page-404-ever">
   <video class="forever-bg-video" autoplay muted loop playsinline preload="auto" poster="assets/images/posters/visual-study-one.jpg" aria-hidden="true" tabindex="-1" disablepictureinpicture>
@@ -68,9 +260,73 @@
         </article>
       </div>
     </section>
+
+    <section class="forever-section endless-module" aria-labelledby="endless-heading">
+      <div class="endless-start-bar endless-top-bar" aria-label="ENDLESS menu bar">
+        <div class="endless-start-btn">File</div>
+        <div class="endless-start-btn">Edit</div>
+        <div class="endless-start-btn">View</div>
+        <div class="endless-start-btn">Help</div>
+      </div>
+
+      <h2 class="endless-title" id="endless-heading">ENDLESS</h2>
+
+      <div class="endless-gallery">
+        <img src="https://vignette4.wikia.nocookie.net/powerlisting/images/e/e4/Mario_Endless_Stairs.gif/revision/latest?cb=20150904211525" alt="Mario climbing an endless staircase" loading="lazy">
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjUxczB5ZDV6MTJuY3dpdTdvdG1uZDh1c2lkbndiemtydDdvMXYwZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pcQcluD7BFIR07NzAI/giphy.gif" alt="Endless animated visual 2" loading="lazy">
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnd2NnlsbTFkbTdocnFmZHdtM21qYWQzd2gweTI3ZmM4a3l4YndoYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EVC6bkt05K67F39vmb/giphy.gif" alt="Endless animated visual 3" loading="lazy">
+        <video autoplay muted loop playsinline preload="metadata" aria-label="Generated endless motion study">
+          <source src="https://cdn.genmo.dev/results/text-to-video-v4/2025-05-22/cmayp4yy40a9b0ds6fsjdg1ls/final.mp4" type="video/mp4">
+        </video>
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnRwZmV6eGs2ZndvbWc2b2lna3hhbzhiN2pjOXAzeW94M3AzNnh6NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Vd8kwqv2aq6kUKpl70/giphy.gif" alt="Endless animated visual 5" loading="lazy">
+        <img src="https://media3.giphy.com/media/QWkuGmMgphvmE/giphy.gif" alt="Endless animated visual 6" loading="lazy">
+      </div>
+
+      <div class="endless-start-bar endless-bottom-bar">
+        <button class="endless-start-btn" id="endlessStartButton" type="button" aria-pressed="false">Start</button>
+        <div class="endless-clock">12:45 PM</div>
+      </div>
+
+      <audio id="endlessBgMusic" preload="none" src="https://img1.wsimg.com/blobby/go/fcde905d-e711-4bbd-8961-6b9df0cf58b2/downloads/4c977457-6603-4080-908d-8a92369390b7/Curtain_Call_Blues%20(1).mp3?ver=1753413618783"></audio>
+    </section>
   </main>
 
   <footer class="site-footer">Ryan Hall · <span data-year></span></footer>
   <script src="assets/js/common.js?v=20260715-1"></script>
+  <script>
+    (() => {
+      const startButton = document.getElementById('endlessStartButton');
+      const bgMusic = document.getElementById('endlessBgMusic');
+      if (!startButton || !bgMusic) return;
+
+      let isPlaying = false;
+
+      const stopMusic = () => {
+        bgMusic.pause();
+        bgMusic.currentTime = 0;
+        startButton.classList.remove('flash');
+        startButton.setAttribute('aria-pressed', 'false');
+        isPlaying = false;
+      };
+
+      startButton.addEventListener('click', async () => {
+        if (isPlaying) {
+          stopMusic();
+          return;
+        }
+
+        try {
+          await bgMusic.play();
+          startButton.classList.add('flash');
+          startButton.setAttribute('aria-pressed', 'true');
+          isPlaying = true;
+        } catch (error) {
+          stopMusic();
+        }
+      });
+
+      bgMusic.addEventListener('ended', stopMusic);
+    })();
+  </script>
 </body>
 </html>
