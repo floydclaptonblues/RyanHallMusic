@@ -145,6 +145,45 @@
     }
   }
 
+  if (document.body.classList.contains('page-404-ever') && !document.getElementById('local-on-the-8s-section')) {
+    const main = document.querySelector('main.inner-main');
+    if (main) {
+      const section = document.createElement('section');
+      section.className = 'forever-section';
+      section.id = 'local-on-the-8s-section';
+      section.setAttribute('aria-labelledby', 'local-on-the-8s-heading');
+
+      const heading = document.createElement('h2');
+      heading.id = 'local-on-the-8s-heading';
+      heading.textContent = "Local On the 8's";
+
+      const grid = document.createElement('div');
+      grid.className = 'forever-grid';
+
+      const card = document.createElement('article');
+      card.className = 'forever-card forever-card--wide';
+
+      const video = document.createElement('video');
+      video.controls = true;
+      video.playsInline = true;
+      video.preload = 'metadata';
+      video.setAttribute('playsinline', '');
+      video.setAttribute('aria-label', "Local On the 8's");
+
+      const source = document.createElement('source');
+      source.src = script
+        ? new URL("../video/Local On the 8's.mp4", script.src).href
+        : "assets/video/Local On the 8's.mp4";
+      source.type = 'video/mp4';
+
+      video.appendChild(source);
+      card.appendChild(video);
+      grid.appendChild(card);
+      section.append(heading, grid);
+      main.appendChild(section);
+    }
+  }
+
   const nav = document.querySelector('.main-nav');
   if (nav) {
     const links = Array.from(nav.querySelectorAll('a'));
