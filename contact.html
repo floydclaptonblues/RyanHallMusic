@@ -13,73 +13,13 @@
   <link rel="stylesheet" href="assets/css/inner-clear-windows.css?v=20260713-9">
   <link rel="stylesheet" href="assets/css/contact-hue.css?v=20260717-2">
   <style>
-    /* A dark performance plate now sits directly behind the Contact copy. */
-    body.page-contact .contact-collage-hero {
-      grid-column: 4 / 16;
-      grid-row: 2 / 13;
-      background-image:
-        linear-gradient(rgba(3, 4, 9, .22), rgba(3, 4, 9, .48)),
-        url("assets/images/photos/Stratosaurus%20Rex.jpg");
-      background-position: center;
-      background-size: cover;
-      filter: saturate(.88) contrast(1.08) brightness(.72);
-    }
-
-    /* Keep the payphones as independent edge fragments, not beneath the words. */
-    body.page-contact .contact-collage-booth--top {
-      grid-column: 8 / 11;
-      grid-row: 1 / 3;
-    }
-
-    body.page-contact .contact-collage-booth--left {
-      grid-column: 1 / 4;
-      grid-row: 8 / 11;
-    }
-
-    body.page-contact .contact-collage-booth--right {
-      grid-column: 16 / 19;
-      grid-row: 6 / 10;
-    }
-
-    body.page-contact .contact-collage-booth--bottom {
-      grid-column: 10 / 13;
-      grid-row: 13 / 15;
-    }
-
-    /* Stable dark glass replaces the pale hue cycle that washed out the text. */
-    body.page-contact .page-heading,
-    body.page-contact .contact-grid article.glass-panel {
-      background: rgba(5, 7, 12, .68) !important;
-      border-color: rgba(245, 245, 255, .74) rgba(12, 14, 20, .92) rgba(12, 14, 20, .92) rgba(245, 245, 255, .74) !important;
-      box-shadow: inset 0 0 26px rgba(0, 0, 0, .25), 0 10px 30px rgba(0, 0, 0, .34) !important;
-      backdrop-filter: blur(7px) saturate(.82);
-      -webkit-backdrop-filter: blur(7px) saturate(.82);
-    }
-
-    body.page-contact .contact-text-box,
-    body.page-contact .contact-list li {
-      animation: none !important;
-      background: rgba(4, 6, 11, .79) !important;
-      border-color: rgba(238, 242, 255, .68) rgba(11, 13, 18, .94) rgba(11, 13, 18, .94) rgba(238, 242, 255, .68) !important;
-      box-shadow: inset 0 0 20px rgba(0, 0, 0, .32), 0 3px 12px rgba(0, 0, 0, .28) !important;
-      color: #fffdf6 !important;
-      text-shadow: 0 2px 3px #000, 1px 1px 0 #000 !important;
-    }
-
-    body.page-contact .page-heading,
-    body.page-contact .contact-inquiries h2,
-    body.page-contact .contact-intro {
-      color: #fffdf6 !important;
-      text-shadow: 0 2px 4px #000, 1px 1px 0 #000 !important;
-    }
-
     body.page-contact .contact-collage-photo--11 {
       object-position: center 18%;
     }
 
     body.page-contact .contact-collage-photo--12 {
       grid-column: 16 / 19;
-      grid-row: 3 / 6;
+      grid-row: 5 / 8;
       object-fit: contain;
       object-position: center;
       background: #21153a;
@@ -96,45 +36,6 @@
     @media (max-width: 800px) {
       body.page-contact .contact-collage {
         grid-template-rows: repeat(34, minmax(0, 1fr));
-      }
-
-      body.page-contact .contact-collage-hero {
-        grid-column: 2 / 8;
-        grid-row: 6 / 23;
-        background-position: 43% center;
-        filter: saturate(.86) contrast(1.08) brightness(.62);
-      }
-
-      body.page-contact .contact-collage-booth--top {
-        grid-column: 3 / 7;
-        grid-row: 4 / 7;
-      }
-
-      body.page-contact .contact-collage-booth--left {
-        grid-column: 1 / 3;
-        grid-row: 14 / 18;
-      }
-
-      body.page-contact .contact-collage-booth--right {
-        grid-column: 7 / 9;
-        grid-row: 15 / 19;
-      }
-
-      body.page-contact .contact-collage-booth--bottom {
-        grid-column: 3 / 7;
-        grid-row: 23 / 26;
-      }
-
-      body.page-contact .page-heading,
-      body.page-contact .contact-grid article.glass-panel {
-        background: rgba(4, 6, 11, .78) !important;
-        backdrop-filter: blur(5px) saturate(.78);
-        -webkit-backdrop-filter: blur(5px) saturate(.78);
-      }
-
-      body.page-contact .contact-text-box,
-      body.page-contact .contact-list li {
-        background: rgba(3, 5, 9, .86) !important;
       }
 
       body.page-contact .contact-collage-photo--11 {
