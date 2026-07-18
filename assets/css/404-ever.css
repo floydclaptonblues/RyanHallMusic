@@ -1,20 +1,16 @@
 /* 404-EVER: the deliberately misplaced media archive. */
 body.inner.page-404-ever {
   background-color: #020204;
+  background-image: url("../images/photos/Black%20And%20White%20Space%20GIF%20by%20xponentialdesign.gif");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
+/* The seamless GIF replaces the former AI-video background layer. */
 body.page-404-ever .forever-bg-video {
-  position: fixed;
-  inset: 0;
-  z-index: -3;
-  width: 100vw;
-  height: 100vh;
-  max-width: none;
-  object-fit: cover;
-  object-position: center center;
-  pointer-events: none;
-  background: #020204;
-  filter: saturate(1.04) contrast(1.03);
+  display: none;
 }
 
 body.inner.page-404-ever::before {
@@ -163,6 +159,10 @@ body.page-404-ever .forever-card--wide {
 }
 
 @media (max-width: 760px) {
+  body.inner.page-404-ever {
+    background-attachment: scroll;
+  }
+
   body.page-404-ever .page-heading--forever {
     grid-template-columns: 1fr;
   }
