@@ -17,9 +17,42 @@
       object-position: center 18%;
     }
 
+    body.page-contact .contact-collage-photo--12 {
+      grid-column: 16 / 19;
+      grid-row: 5 / 8;
+      object-fit: contain;
+      object-position: center;
+      background: #21153a;
+      transform: rotate(-1.1deg);
+    }
+
+    body.page-contact .contact-collage-photo--13 {
+      grid-column: 14 / 19;
+      grid-row: 10 / 12;
+      object-position: center 52%;
+      transform: rotate(1deg);
+    }
+
     @media (max-width: 800px) {
+      body.page-contact .contact-collage {
+        grid-template-rows: repeat(34, minmax(0, 1fr));
+      }
+
       body.page-contact .contact-collage-photo--11 {
         object-position: center 12%;
+      }
+
+      body.page-contact .contact-collage-photo--12 {
+        grid-column: 1 / 4;
+        grid-row: 31 / 35;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      body.page-contact .contact-collage-photo--13 {
+        grid-column: 4 / 9;
+        grid-row: 31 / 35;
+        object-position: center 52%;
       }
     }
   </style>
@@ -43,6 +76,8 @@
     <img class="contact-collage-tile contact-collage-photo contact-collage-photo--9" src="assets/images/photos/556096780_25170762665882121_6168067414176250639_n.jpg" alt="" decoding="async">
     <img class="contact-collage-tile contact-collage-photo contact-collage-photo--10" src="assets/images/photos/556853169_25177655855192802_8953535047937287429_n.jpg" alt="" decoding="async">
     <img class="contact-collage-tile contact-collage-photo contact-collage-photo--11" src="assets/images/photos/635926825_26475023775455997_7287667085626860242_n.jpg" alt="" decoding="async">
+    <img class="contact-collage-tile contact-collage-photo contact-collage-photo--12" src="assets/images/photos/73513722_2805629149488792_3911750913483603968_n.jpg" alt="" decoding="async">
+    <img class="contact-collage-tile contact-collage-photo contact-collage-photo--13" src="assets/images/photos/556049181_25164995453125509_250222793479071076_n.jpg" alt="" decoding="async">
   </div>
 
   <a class="skip-link" href="#content">Skip to contact</a>
