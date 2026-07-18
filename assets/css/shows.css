@@ -57,24 +57,99 @@ body.page-shows .show-titlebar span:last-child {
 }
 
 body.page-shows .show-content {
+  display: grid;
+  grid-template-columns: minmax(250px, 340px) minmax(0, 1fr);
+  padding: 0;
+}
+
+body.page-shows .show-photo {
+  margin: 0;
+  padding: 10px;
+  background: rgba(255,255,255,.12);
+  border-right: 2px groove #fff;
+}
+
+body.page-shows .show-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid;
+  border-color: #404040 #fff #fff #404040;
+  background: #111;
+}
+
+body.page-shows .show-photo figcaption {
+  margin-top: 8px;
+  padding: 5px 6px;
+  color: #202020;
+  background: rgba(255,255,255,.28);
+  border: 1px solid rgba(64,64,64,.45);
+  font-family: var(--dot);
+  font-size: 11px;
+  line-height: 1.45;
+  text-align: center;
+}
+
+body.page-shows .show-details {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
   padding: clamp(24px, 5vw, 48px);
 }
 
+body.page-shows .show-details .show-status {
+  width: fit-content;
+  margin: 0 0 12px;
+  padding: 3px 7px;
+  color: #fff;
+  background: #000080;
+  border: 1px solid #fff;
+  font-family: var(--dot);
+  font-size: 11px;
+  letter-spacing: .04em;
+  text-shadow: 1px 1px 0 #000;
+}
+
 body.page-shows .show-content h2 {
-  margin: 0 0 14px;
+  margin: 0 0 18px;
   font-family: var(--chicago);
-  font-size: clamp(30px, 5vw, 54px);
+  font-size: clamp(34px, 5vw, 58px);
   letter-spacing: -.055em;
 }
 
-body.page-shows .show-content p {
-  max-width: 680px;
+body.page-shows .show-facts {
   margin: 0 0 22px;
-  line-height: 1.55;
+  padding: 0;
+}
+
+body.page-shows .show-facts div {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #808080;
+}
+
+body.page-shows .show-facts div:first-child {
+  border-top: 1px solid #808080;
+}
+
+body.page-shows .show-facts dt {
+  font-family: var(--chicago);
+  font-weight: 900;
+}
+
+body.page-shows .show-facts dd {
+  margin: 0;
+  line-height: 1.45;
 }
 
 body.page-shows .show-content .text-button {
   display: inline-flex;
+  width: fit-content;
   min-height: 40px;
   align-items: center;
   padding: 0 15px;
@@ -83,5 +158,30 @@ body.page-shows .show-content .text-button {
 @media (max-width: 800px) {
   body.inner.page-shows::before {
     background-attachment: scroll;
+  }
+
+  body.page-shows .show-content {
+    grid-template-columns: 1fr;
+  }
+
+  body.page-shows .show-photo {
+    border-right: 0;
+    border-bottom: 2px groove #fff;
+  }
+
+  body.page-shows .show-photo img {
+    max-height: 72vh;
+    object-fit: contain;
+  }
+
+  body.page-shows .show-details {
+    padding: 24px 18px 28px;
+  }
+}
+
+@media (max-width: 520px) {
+  body.page-shows .show-facts div {
+    grid-template-columns: 1fr;
+    gap: 3px;
   }
 }
