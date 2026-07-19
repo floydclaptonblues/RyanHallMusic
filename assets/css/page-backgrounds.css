@@ -34,7 +34,7 @@ body.inner.page-music::before {
 body.inner.page-videos::before {
   background-image:
     linear-gradient(180deg, rgba(3,5,12,.08), rgba(2,4,10,.20)),
-    url("../images/photos/gif%20%282%29.gif");
+    url("../images/photos/gif%20%283%29.gif");
 }
 
 body.inner.page-pictures::before {
