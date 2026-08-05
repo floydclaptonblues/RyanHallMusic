@@ -1,5 +1,6 @@
 window.RYAN_CATALOG = {
   music: [
+    { slug: 'marigolds-fa-la-la', title: 'Marigolds (Fa La La)', subtitle: 'A song of voices, whistles, one synthesizer, and a nylon-string guitar', genre: 'Psychedelic Rock', file: 'songs/Marigolds_Fa_La_La.mp3', duration: '' },
     { slug: 'outskirts-of-town', title: 'Outskirts of Town', subtitle: '', genre: 'Rock', file: 'assets/audio/outskirts-of-town.mp3', duration: '5:56' },
     { slug: 'empty-places', title: 'Empty Places', subtitle: '', genre: 'Rock', file: 'assets/audio/empty-places.mp3', duration: '5:30' },
     { slug: 'curtain-call-blues', title: 'Curtain Call Blues', subtitle: '', genre: 'Blues', file: 'assets/audio/curtain-call-blues.mp3', duration: '3:58' },

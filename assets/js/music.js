@@ -10,7 +10,7 @@
   const duration = document.getElementById('dock-duration');
   const canvas = document.getElementById('visualizer');
   const ctx = canvas.getContext('2d');
-  const genreOrder = ['Rock', 'Blues', 'Ambient', 'Avant-Garde'];
+  const genreOrder = ['Rock', 'Psychedelic Rock', 'Blues', 'Ambient', 'Avant-Garde'];
   let activeIndex = -1;
   let audioContext, analyser, source, data;
 
@@ -24,7 +24,7 @@
     let artClass = 'track-art';
     if (track.genre === 'Rock') {
       artClass += ' track-art--on-the-rays';
-    } else if (track.genre === 'Avant-Garde' || track.genre === 'Ambient') {
+    } else if (track.genre === 'Avant-Garde' || track.genre === 'Ambient' || track.genre === 'Psychedelic Rock') {
       artClass += ' track-art--why-are-we-here';
     } else if (track.genre === 'Blues') {
       artClass += ' track-art--big-easy-homeboy';
