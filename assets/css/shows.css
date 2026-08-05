@@ -37,6 +37,10 @@ body.page-shows .show-window {
   border-radius: 0;
 }
 
+body.page-shows .show-window + .show-window {
+  margin-top: 24px;
+}
+
 body.page-shows .show-titlebar {
   display: flex;
   align-items: center;
@@ -145,6 +149,11 @@ body.page-shows .show-facts dt {
 body.page-shows .show-facts dd {
   margin: 0;
   line-height: 1.45;
+}
+
+body.page-shows .show-description {
+  margin: 0;
+  line-height: 1.65;
 }
 
 body.page-shows .show-content .text-button {
