@@ -41,6 +41,26 @@ body.page-shows .show-window + .show-window {
   margin-top: 24px;
 }
 
+body.page-shows .shows-section-heading {
+  margin: 52px 0 20px;
+  padding: 0 2px;
+}
+
+body.page-shows .shows-section-heading .kicker {
+  margin-bottom: 4px;
+}
+
+body.page-shows .shows-section-heading h2 {
+  margin: 0;
+  font-family: var(--chicago);
+  font-size: clamp(30px, 5vw, 48px);
+  letter-spacing: -.04em;
+}
+
+body.page-shows .shows-section-heading + .show-window {
+  margin-top: 0;
+}
+
 body.page-shows .show-titlebar {
   display: flex;
   align-items: center;
@@ -115,6 +135,10 @@ body.page-shows .show-details .show-status {
   font-size: 11px;
   letter-spacing: .04em;
   text-shadow: 1px 1px 0 #000;
+}
+
+body.page-shows .past-show .show-details .show-status {
+  background: #555;
 }
 
 body.page-shows .show-content h2 {
